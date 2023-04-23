@@ -1,53 +1,42 @@
-# Todo List API in Python Flask
+# API para consultar la Unidad de Fomento en Python Flask
 
-<a href="https://www.breatheco.de"><img height="280" align="right" src="https://raw.githubusercontent.com/breatheco-de/python-flask-api-tutorial/3ffb90ea974146f57a3bdfd59665b4c4d5d05197/.breathecode/assets/badge.svg"></a>
+API en Python que permite a los usuarios consultar el valor de la Unidad de Fomento para una fecha específica.
 
-This is an interactive tutorial that will teach you how to create an API using the Python Flask framework using Python and Pipenv. Please click here to start the tutorial:
+Esta APIse creó usando API usando Pythony su framework Flask y con Pipenv.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/breatheco-de/python-flask-api-tutorial)
+## Instalación e intrucciones de ejecución
+⚠️ Asegurarse de tener instalado `python 3.6+` y corriendo en su computadora
 
+Instale los requisitos en un virtualenv o en el entorno de su elección
 
-## About the project we are going to build
+```sh
+pip install pipenv
+pipenv shell
+pipenv install
+```
 
-In this tutorial we are going to be building a REST API that exposes 3 endpoints to the internet:
+### Ejecución del proyecto
+```sh
+pipenv run server
+```
+
+## Endpoints
 
 ```txt
-GET /todos
-POST /todos
-DELETE /todos/<int:position>
+GET /api/indicator/<string:date>
 ```
 
-### GET /todos
+### GET /api/indicator/<string:date>
 
-Will return the list of all todos like this:
-
-```javascript
-[
-    {
-        "done": true,
-        "label": "Sample Todo 1"
-    },
-    {
-        "done": true,
-        "label": "Sample Todo 2"
-    }
-]
-```
-
-### POST /todos
-
-It's going to add a new todo to the list, it will receive the following request body:
+Este endpoint devuelve (/api/indicator/05-05-2023):
 
 ```javascript
 {
-    "done": true,
-    "label": "Sample Todo 1"
+    "valor": 35903.96
 }
 ```
 
-And return the updated list of todos
+## Test
+Para ejecutar los test debemos primero tener corriendo el proyecto en una terminal `pipenv run server`.
 
-### DELETE /todos/<int:position>
-
-It's going to remove one todo based on a given position at the end of the url, and return the updated list of todos.
-
+Y luego en otra terminal ejecutar el siguiente comando: `pipenv run test` o `python tests/test_app.py`
