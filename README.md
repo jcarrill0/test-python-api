@@ -2,7 +2,7 @@
 
 API en Python que permite a los usuarios consultar el valor de la Unidad de Fomento para una fecha específica.
 
-Esta APIse creó usando API usando Pythony su framework Flask y con Pipenv.
+Esta API se creó usando Python con su framework Flask y con Pipenv.
 
 ## Instalación e intrucciones de ejecución
 ⚠️ Asegurarse de tener instalado `python 3.6+` y corriendo en su computadora
