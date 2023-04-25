@@ -23,12 +23,12 @@ pipenv run server
 ## Endpoints
 
 ```txt
-GET /api/indicator/<string:date>
+GET /api/v1/indicator/<string:date>
 ```
 
-### GET /api/indicator/<string:date>
+### GET /api/v1/indicator/<string:date>
 
-Este endpoint devuelve (/api/indicator/05-05-2023):
+Este endpoint devuelve (/api/v1/indicator/05-05-2023):
 
 ```javascript
 {
