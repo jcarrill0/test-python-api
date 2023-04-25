@@ -2,7 +2,7 @@ import unittest
 import requests
 
 class   TestApplication(unittest.TestCase):
-    URL = 'http://127.0.0.1:8000/api/indicator/'
+    URL = 'http://127.0.0.1:8000/api/v1/indicator/'
 
     def test_get_uf_indicator_by_date_success(self):
         search_date = '05-05-2023'

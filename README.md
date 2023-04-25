@@ -39,4 +39,9 @@ Este endpoint devuelve (/api/v1/indicator/05-05-2023):
 ## Test
 Para ejecutar los test debemos primero tener corriendo el proyecto en una terminal `pipenv run server`.
 
-Y luego en otra terminal ejecutar el siguiente comando: `pipenv run test` o `python tests/test_app.py`
+Y luego en otra terminal ejecutar los siguientes comandos: 
+
+```sh
+pipenv shell
+pipenv run test
+```
